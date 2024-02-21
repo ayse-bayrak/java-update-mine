@@ -1,0 +1,7 @@
+
+less than Java 8, Java can do functional programming like this
+
+In Java everything is object. You can not have some individual actions alone.
+
+if you want an action you need to write class then create object from that and call it.
+This was missing part in Java (Functional Programming)

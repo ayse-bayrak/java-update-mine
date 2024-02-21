@@ -1,0 +1,15 @@
+Given the following classes:
+class Shape { /* ... */ }
+class Circle extends Shape { /* ... */ }
+class Rectangle extends Shape { /* ... */ }
+class Node<T> { /* ... */ }
+Will the following code compile? If not, why?
+Node<Circle> nc = new Node<>();
+Node<Shape> ns = nc;
+
+Node<Circle> nc = new Node<>(); // in here nc Node<Circle>
+Node only acceptingg one value, T means whatever you passing over..
+you can not assign to different things
+
+Generic does not care extends,
+i don't accept any other object types i don't accept Shape class
