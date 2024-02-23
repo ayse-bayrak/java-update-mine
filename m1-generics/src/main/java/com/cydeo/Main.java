@@ -7,7 +7,6 @@ public class Main {
 Before Generic
 1-What was the problem?
 2-What was people doing?
-
  */
     public static void main(String[] args) {
 
@@ -16,7 +15,7 @@ Before Generic
         items.add(1);
         items.add(2);
         items.add(3);
-        //items.add("Apple"); // when i add String to items, it give me excepion
+        //items.add("Apple"); // when i add String to items, it give me exception
         //class java.lang.String cannot be cast to class java.lang.Integer
         //This was the problem
         printDouble(items);
@@ -25,8 +24,24 @@ Before Generic
 
 //        LinkedList items1 = new LinkedList();
 //        items1.add(new Shape());
-    }
 // This is what people was doing.
+
+        System.out.println("***********************");
+
+        FootballPlayer joe = new FootballPlayer("joe");
+        BaseballPlayer pat = new BaseballPlayer("Pat");
+        SoccerPlayer beckham = new SoccerPlayer("Beckham");
+
+        Team<SoccerPlayer> liverpool = new Team("Liverpool"); //Team accepting any object
+
+
+//        liverpool.addPlayer(joe);
+//        liverpool.addPlayer(pat);
+        liverpool.addPlayer(beckham);
+
+
+    }
+
     private static void printDouble(ArrayList<Integer> items) {
         for (Integer i : items) { // it can be int i : items, both are fine
             System.out.println(i*2);

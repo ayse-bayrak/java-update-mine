@@ -10,6 +10,6 @@ public enum Operation {
     }
 
     // we can write method with the same name (Operation) as well
-    // but it si not so common, in the application world, you never gonna write some business
+    // but it is not so common, in the application world, you never gonna write some business
     //logic method inside the inner the maximum you're gonna write it in the enum.
 }

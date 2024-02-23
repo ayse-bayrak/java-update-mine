@@ -8,7 +8,7 @@ Node<Circle> nc = new Node<>();
 Node<Shape> ns = nc;
 
 Node<Circle> nc = new Node<>(); // in here nc Node<Circle>
-Node only acceptingg one value, T means whatever you passing over..
+Node is only accepting one value, T means whatever you passing over.
 you can not assign to different things
 
 Generic does not care extends,
