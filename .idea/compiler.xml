@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="m3-lambda" />
+        <module name="m6-stream" />
+        <module name="m5-comparator_interface" />
+        <module name="m2-enum" />
+        <module name="m4-double_colon_operators" />
+        <module name="m1-generics" />
+        <module name="m4-lambda-continue" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="stream" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
