@@ -11,7 +11,7 @@ public class Main {
         Calculate sum = (x, y) -> System.out.println(x+y);
         Calculate s1 = (x, y) -> Calculator.findSum(x,y);
         // Reference to a Static Method,
-        // if your lambda imlementation,
+        // if your lambda implementation,
         Calculate s2 = Calculator::findSum;
         s2.calculate(10, 20);
 

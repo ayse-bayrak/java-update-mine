@@ -1,6 +1,5 @@
 package com.cydeo;
 
-import java.util.function.BiConsumer;
 
 public class Calculator {
     public static void findSum(int x, int y) {
