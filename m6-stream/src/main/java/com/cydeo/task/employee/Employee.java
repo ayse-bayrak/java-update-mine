@@ -8,10 +8,9 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class Employee {
-    private int empId;   //.stream this became Stream<>
+    private int empId;   //.stream ==> this became Stream<>
     private String name;
     private String empEmail;
-    private List<String> empPhoneNumbers; //.stream this becaame Stream<>
-
+    private List<String> empPhoneNumbers; //with .stream ==> this became Stream< >
 
 }

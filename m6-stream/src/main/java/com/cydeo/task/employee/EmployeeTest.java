@@ -13,7 +13,7 @@ public class EmployeeTest {
         System.out.println("Print all emails");
 
         EmployeeData.readAll()
- //             .map(employee -> employee.getEmpEmail()) //both of the things same thing
+ //             .map(employee -> employee.getEmpEmail()) //both of the things means same thing
                 .map(Employee::getEmpEmail)
                 .forEach(System.out::println);
 
@@ -21,6 +21,7 @@ public class EmployeeTest {
 
         EmployeeData.readAll()
                  .flatMap(employee -> employee.getEmpPhoneNumbers().stream())
+                //flatMap always accept Stream<Stream>
                 .forEach(System.out::println);
 
         System.out.println("Print all Phone Numbers with Double Colon");
@@ -28,8 +29,6 @@ public class EmployeeTest {
                 .map(Employee::getEmpPhoneNumbers)
                 .flatMap(List::stream)
                 .forEach(System.out::println);
-
-
 
     }
 }
