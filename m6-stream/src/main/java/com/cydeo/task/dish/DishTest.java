@@ -37,7 +37,7 @@ public class DishTest {
 
         System.out.println("4-Print all dish name that are below 400 calories in sorted");
 
-        DishData.getAll().stream()  // WHAT I have in the stream? Dish (Rice, Other, 400... all properties)
+        DishData.getAll().stream()  // WHAT I have in the stream? Dish Object (Rice, Other, 400... all properties)
                 .filter(p -> p.getCalories() < 400)
                 .sorted(comparing(Dish::getCalories).reversed()) // base on the what, we import `import static java.util.Comparator.comparing;`
                 .map(Dish::getName) // --------> What do you have in your stream?? only names of dish: RICE, SHRIMP..
