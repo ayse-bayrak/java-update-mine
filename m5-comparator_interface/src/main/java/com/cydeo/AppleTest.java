@@ -27,7 +27,6 @@ public class AppleTest {
         System.out.println(inventory);
 
         //Chaining
-
         inventory.sort(comparing(Apple::getWeight)
                 .reversed()
                 .thenComparing(Apple::getColor));  // lambda provides flexibility
