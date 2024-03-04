@@ -17,12 +17,11 @@ public class Reducing {
         for (int number : numbers) {
             sum = sum + number;
         }
-
-
         // with reduce()
         int result = numbers.stream().reduce(0, (a,b)->a+b);
         System.out.println(result);
 
+        //without initial value
         Optional<Integer> result2= numbers.stream().reduce( (a, b) -> a+b);
         // if there is no initial value, it is going to return Optional, but output is same
         System.out.println(result2.get());
@@ -31,7 +30,8 @@ public class Reducing {
               int result4 =
                       DishData.getAll().stream()
                        .map(Dish::getCalories)
-                       .reduce((a,b)->a+b).get(); // java don't like to look as this
+                      // .reduce((a,b)->a+b).get(); // java don't like to look as this, like :: double colon operator
+                              .reduce(Integer::sum).get();
 
         // reduce is returning Optional,
         // to make it integer we need to get() method
@@ -39,9 +39,16 @@ public class Reducing {
         System.out.println(result4);
 
         //Max and min
+
+        Optional<Integer> sum1 = numbers.stream().reduce(Integer::sum);
+        Optional<Integer> min1 = numbers.stream().reduce(Integer::min);
+        Optional<Integer> max1 = numbers.stream().reduce(Integer::max);
+
         System.out.println(numbers.stream().reduce(Integer::sum).get());
         System.out.println(numbers.stream().reduce(Integer::min).get());
         System.out.println(numbers.stream().reduce(Integer::max).get());
+
+
 
         System.out.println("COUNT");// HOW MANY ITEMS you have object in the stream,
         // everything is object in the stream
