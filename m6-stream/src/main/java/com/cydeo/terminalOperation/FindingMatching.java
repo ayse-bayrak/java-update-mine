@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class FindingMatching {
@@ -30,7 +31,8 @@ public class FindingMatching {
 
         System.out.println("FIND ANY");
 
-        Optional<Dish> dish = DishData.getAll().stream().filter(Dish::isVegetarian).findAny();// prevent null pointer exception
+        Optional<Dish> dish =
+                DishData.getAll().stream().filter(Dish::isVegetarian).findAny();// prevent null pointer exception
         System.out.println(dish.get());
         //Dish(name=fries, vegetarian=true, calories=530, type=OTHER)
 
@@ -40,20 +42,23 @@ public class FindingMatching {
         System.out.println(dish2.get());
 
         //PARALLEL STREAMS (ASYNC)
+        System.out.println(IntStream.range(0,100).parallel().findAny());//OptionalInt[65] - parallel async
+        System.out.println(IntStream.range(0,100).parallel().findFirst());//OptionalInt[0]
 
         List<String> list1 = Arrays.asList("Jhonny","David","Jack","Duke","Jill","Dany","Julia","Jenish","Divya");
         List<String> list2 = Arrays.asList("Jhonny","David","Jack","Duke","Jill","Dany","Julia","Jenish","Divya");
 
-//        Optional<String> findFirst = list1.parallelStream().filter(s -> s.startsWith("D")).findFirst();
-//        Optional<String> findAny = list2.parallelStream().filter(s -> s.startsWith("J")).findAny();
+//        Optional<String> findFirst = list1.parallelStream().filter(s -> s.startsWith("D")).findFirst(); //David
+//        Optional<String> findAny = list2.parallelStream().filter(s -> s.startsWith("J")).findAny(); //Jill
+        //since we use parallel stream==>async way there is no rule this one
 
-        Optional<String> findFirst = list1.stream().filter(s -> s.startsWith("D")).findFirst();
-        Optional<String> findAny = list2.stream().filter(s -> s.startsWith("J")).findAny();
+        Optional<String> findFirst = list1.stream().filter(s -> s.startsWith("D")).findFirst();//David
+        Optional<String> findAny = list2.stream().filter(s -> s.startsWith("J")).findAny();//Jhonny
 
         System.out.println(findFirst.get());
         System.out.println(findAny.get());
 
-        //min max
+        //MIN AND MAX
         System.out.println("min");
         Optional<Dish> first = DishData.getAll().stream()
                 .sorted(Comparator.comparing(Dish::getCalories))
@@ -61,7 +66,9 @@ public class FindingMatching {
         System.out.println(first.get());
 
         // with min method
-        Optional<Dish> dMin = DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
+        Optional<Dish> dMin =
+                DishData.getAll().stream()
+                .min(Comparator.comparing(Dish::getCalories));
         System.out.println(dMin.get());
 
 

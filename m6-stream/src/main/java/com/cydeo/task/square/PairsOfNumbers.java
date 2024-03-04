@@ -10,6 +10,8 @@ public class PairsOfNumbers {
         List<Integer> numbers1 = Arrays.asList(1,2,3);
 List<Integer> numbers2 = Arrays.asList(3,4);
 List<int[]> pairs = new ArrayList<>();
+//numbers1.stream()
+//        .flatMap(numbers2.stream())
 
 
     // pairs.add(numbers1.stream())
