@@ -12,8 +12,13 @@ import java.util.stream.Stream;
 public class CollectorsDemo {
 
     public static void main(String[] args) {
-        //toCollection(Supplier) : is used to create a Collection using Collector
-// want to hold out of stream
+
+        //Java Collectors is a utility class
+        //utility class is static class and we can use method in the utility class directly ClassName.methodName
+       //Stream.collect()
+
+
+        //toCollection(Supplier) : is used to create a Collection using Collector want to hold out of stream
         // i need to capture those assign to other where
         List<Integer> numbers = Arrays.asList(3,4,5,6,6,7);
 
@@ -28,7 +33,8 @@ public class CollectorsDemo {
 
         System.out.println(numberSet);
 
-        //toList(): returns a Collector interface gathers the input data into a new List
+        //toList(): returns a Collector interface that gathers the input data into a new List
+        //same thing with before one
 
         List<Integer> numberList2 = numbers.stream()
                 .filter(x->x%2==0)
