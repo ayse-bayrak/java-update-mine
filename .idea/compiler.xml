@@ -15,6 +15,7 @@
         <module name="m4-double_colon_operators" />
         <module name="m1-generics" />
         <module name="m4-lambda-continue" />
+        <module name="m8-new-version-updates" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
