@@ -6,14 +6,14 @@ import java.util.*;
 public class FactoryMethodsDemo {
     public static void main(String[] args) {
 
-        //Factory methods means .of() method
-        //Creating unmodifiable List before Java9
+        //Factory methods means ==> .of() method
+        //Creating unmodifiable List ==> before Java9
 
         List<String> courses = Collections.unmodifiableList(Arrays.asList("Java","Spring","Agile"));
         courses.add("TS");
         System.out.println(courses);
 
-        //Creating unmodifiable List before Java9
+        //Creating unmodifiable List after Java9
         List<String> myCourses = List.of("Java", "Spring", "Agile");
         myCourses.add("TS");
         System.out.println(courses);
@@ -26,6 +26,15 @@ public class FactoryMethodsDemo {
                 Map.entry("Samsung TV", 1),
                 Map.entry("PSP", 1),
                 Map.entry("Chair", 5));
+
+        //There are 2 ways to create an immutable map in Java 9.
+        //1-Map.of
+        Map<Integer,String> studentInfo = Map.of(1,"Ozzy",2,"Mike");
+        //2-Map.ofEntries
+        Map<Integer,String> studentInfo1 = Map.ofEntries(
+        Map.entry(1,"Ozzy"),
+        Map.entry(2,"Mike")
+        );
 
     }
 }

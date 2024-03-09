@@ -1,4 +1,4 @@
-package com.cydeo.review;
+package com.cydeo.review1;
 
 public class User {
 

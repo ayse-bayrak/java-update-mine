@@ -6,7 +6,7 @@ public class OrElseThrowDemo {
     public static void main(String[] args) {
         Optional<String> str = Optional.empty();
 
-        //System.out.println(str.get());// when we only use get(), gice ugly exception (.NoSuchElementException)
+        //System.out.println(str.get());// when we only use get(), give ugly exception (.NoSuchElementException)
         //your application is gonna stop, we don't want this.
 
 //        if(str.isPresent()){

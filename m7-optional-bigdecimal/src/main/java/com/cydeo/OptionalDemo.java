@@ -26,6 +26,8 @@ public class OptionalDemo {
         // get
     //    System.out.println(bigNumber.get()); // No value present
 
+
+        //we should use orElse() instead of get() and is Present() combining
         //orElse
         System.out.println(bigNumber.orElse(5));//5
 

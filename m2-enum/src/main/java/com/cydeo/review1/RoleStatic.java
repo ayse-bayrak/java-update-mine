@@ -1,6 +1,4 @@
-package com.cydeo.review;
-
-import com.cydeo.CurrencyDemo;
+package com.cydeo.review1;
 
 public class RoleStatic {
     public static final RoleStatic ADMIN =  new RoleStatic();
