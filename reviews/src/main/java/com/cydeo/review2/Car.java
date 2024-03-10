@@ -10,7 +10,7 @@ import lombok.*;
 //@Setter()
 //@EqualsAndHashCode // it is gonna give you overridden hashcode and equals method
 @Data //  is the combineation of @RequiredArgsConstructor @ToString @Getter setter equalsAndHashCode
-
+@Builder
 public class Car {
 
    // @Getter(AccessLevel.NONE)

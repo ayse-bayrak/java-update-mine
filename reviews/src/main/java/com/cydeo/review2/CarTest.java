@@ -8,6 +8,18 @@ public class CarTest {
 
     public static void main(String[] args) {
 
+
+        //        Car2 car2 = new Car2();
+//        Car2 car22 = new Car2("Toyota");
+//        Car2 car23 = new Car2("Toyota", 150);
+
+        Car2 car2FromBuilder = Car2.builder().make("Toyota").topSpeed(150).year(2020).build();
+        Car2 car2FromBuilder2 = Car2.builder().build();
+        Car2 car2FromBuilder3 = Car2.builder().make("Toyota").build();
+
+        Car carFromBuilder = Car.builder().make("Toyota").build();
+        Car carFromBuilder2 = Car.builder().make("Toyota").topSpeed(150).build();
+
         List<Car> carList = new ArrayList<>();
 
         carList.add(new Car("Toyota", 140, 1998));
