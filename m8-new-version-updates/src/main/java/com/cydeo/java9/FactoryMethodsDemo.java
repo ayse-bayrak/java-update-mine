@@ -7,13 +7,13 @@ public class FactoryMethodsDemo {
     public static void main(String[] args) {
 
         //Factory methods means ==> .of() method
-        //Creating unmodifiable List ==> before Java9
+        //Creating unmodifiable, immutable List, Set, Map ==> before Java9
 
         List<String> courses = Collections.unmodifiableList(Arrays.asList("Java","Spring","Agile"));
         courses.add("TS");
         System.out.println(courses);
 
-        //Creating unmodifiable List after Java9
+        //Creating unmodifiable List after Java9 ==> .of() ==> immutable List, Set, Map
         List<String> myCourses = List.of("Java", "Spring", "Agile");
         myCourses.add("TS");
         System.out.println(courses);

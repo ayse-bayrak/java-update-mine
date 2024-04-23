@@ -20,9 +20,9 @@ public class TeeingDemo {
 
         HashMap<String, Employee> result = employeeList.stream()
                 .collect(Collectors.teeing( // getting 3 parameters, two Collectors and merger
-                Collectors.maxBy(Comparator.comparing(Employee::getSalary)),
-                Collectors.minBy((Comparator.comparing(Employee::getSalary))),
-                (e1, e2)-> {
+                Collectors.maxBy(Comparator.comparing(Employee::getSalary)), // first Collector
+                Collectors.minBy((Comparator.comparing(Employee::getSalary))), // second Collector
+                (e1, e2)-> { // merger
                     HashMap<String, Employee> map = new HashMap<>();
                     map.put("MAX", e1.get());
                     map.put("MIN", e2.get());
@@ -30,6 +30,8 @@ public class TeeingDemo {
                 }
         ));
         System.out.println(result);
+        //{ MIN=Employee {id=1, name='A', salary=100},
+        //  MAX=Employee {id=4, name='d', salary=400} }
     }
 }
 
@@ -70,7 +72,7 @@ class Employee{
 
     @Override
     public String toString() {
-        return "com.cydeo.java12.Employee{" +
+        return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", salary=" + salary +

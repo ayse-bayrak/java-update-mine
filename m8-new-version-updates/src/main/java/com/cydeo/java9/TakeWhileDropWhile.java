@@ -5,11 +5,38 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TakeWhileDropWhile {
 
     public static void main(String[] args) {
+//takeWhile() vs filter
+        Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+                .filter(i -> i < 4) // all items
+                .forEach(System.out::print); //123321
+        Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+                .takeWhile(i -> i < 4) // first occurrence, so steam must be sorted
+                .forEach(System.out::print); //123
+//=======================================================================
+        // limit() vs takeWhile() ==> takeWhile() accept condition limit() does not accept condition, it accepts value
+        Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+                .limit(4)
+                .forEach(System.out::print); //1234
 
+        Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+                .takeWhile(i -> i < 4)
+                .forEach(System.out::print); //123
+//=======================================================================
+        //skip() vs dropWhile() ==> dropWhile() accept condition skip() does not accept condition, it accepts value
+        Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+                .skip(4)
+                .forEach(System.out::print); //5678910987654321
+
+        Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+                .dropWhile(i -> i < 4)
+                .forEach(System.out::print); //45678910987654321
+//=======================================================================
+        //filter() vs takeWhile() vs dropWhile() (drops all the matching one)
         List<Stock> stocks = getStocks();
         System.out.println("Stocks sorted: \n" + stocks);
 

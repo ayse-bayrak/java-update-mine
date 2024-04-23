@@ -6,11 +6,9 @@ import java.util.Scanner;
 public class ModuleDemo {
     public static void main(String[] args) {
 
-
-        System.out.println(String.class.getSimpleName());
-        System.out.println(List.class.getSimpleName());
-        System.out.println(Scanner.class.getSimpleName());
-
+        System.out.println(String.class.getModule()); //module java.base
+        System.out.println(List.class.getModule());   //module java.base
+        System.out.println(Scanner.class.getModule());//module java.base
 
     }
 }

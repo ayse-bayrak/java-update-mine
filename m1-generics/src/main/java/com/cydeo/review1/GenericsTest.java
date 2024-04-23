@@ -30,7 +30,7 @@ public class GenericsTest {
         personList.add(new Teacher("Albus", 201));
         personList.add(new Teacher("Severus", 202));
 
-        printInfo2(studentList);
+        printInfo2(studentList); // since printInfo2 is generic we can apply those types ( because all extends Person)
         printInfo2(teacherList);
         printInfo2(personList);
 

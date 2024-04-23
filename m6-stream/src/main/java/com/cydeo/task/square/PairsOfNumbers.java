@@ -3,28 +3,28 @@ package com.cydeo.task.square;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PairsOfNumbers {
 
-    public static void main(String[] args) {
-        List<Integer> numbers1 = Arrays.asList(1,2,3);
-List<Integer> numbers2 = Arrays.asList(3,4);
-List<int[]> pairs = new ArrayList<>();
-//numbers1.stream()
-//        .flatMap(numbers2.stream())
+        public static List<List<Integer>> getAllPairs(List<Integer> list1, List<Integer> list2) {
+            return list1.stream()
+                    // FlatMap to create pairs from list1 and list2
+                    .flatMap(num1 -> list2.stream()
+                            .map(num2 -> Arrays.asList(num1, num2))
+                    )
+                    .collect(Collectors.toList());
+        }
 
+        public static void main(String[] args) {
+            List<Integer> list1 = Arrays.asList(1, 2, 3);
+            List<Integer> list2 = Arrays.asList(3, 4);
 
-    // pairs.add(numbers1.stream())
+            List<List<Integer>> pairs = getAllPairs(list1, list2);
 
-       // numbers1.stream().map((a,b)->  )
-
-
-
-
-
-
-
-    }
+            // Print all pairs
+            pairs.forEach(System.out::println);
+        }
 }
 /*
 Given two lists of numbers, how would you return all pairs of numbers? For

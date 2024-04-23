@@ -15,7 +15,7 @@ public class OrElseThrowDemo {
 //            //exception handling
 //        }
 
-        // but wrigt now Java 1o combining get() and isPresent, we can directly orEseThrow()
+        // but wright now Java 10 combining get() and isPresent(), we can directly orEseThrow()
         //str.orEseThrow()==> If a value is present, returns the value, otherwise throws NoSuchElementException.
 
         System.out.println(str.orElseThrow());

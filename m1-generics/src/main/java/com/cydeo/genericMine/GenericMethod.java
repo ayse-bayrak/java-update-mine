@@ -25,7 +25,7 @@ public class GenericMethod {
    */
 
     // if we have more than one method with generics the best practice is create Generic Class
-    public static <T> void printEach(T[] t) {
+    public static <T> void printEach(T[] t) { // <> before the return type
         for (T each : t) {
             System.out.println(each);
         }

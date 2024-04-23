@@ -21,7 +21,7 @@ public class StreamIntermediateOperations {
                 .filter(i-> i%2==0)  // Intermediate Operation 1, and you need to close the stream
                 .forEach(System.out::println); // I am closing stream
 
-        //DISTINCT- Filtereing unique element- do not show me the duplicate
+        //DISTINCT- Filtering unique element- do not show me the duplicate
         System.out.println("Distinct");
 
         Stream<Integer> str = list.stream()

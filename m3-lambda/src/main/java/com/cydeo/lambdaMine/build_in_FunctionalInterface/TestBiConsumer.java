@@ -8,6 +8,7 @@ public class TestBiConsumer {
         //void accept(T t, U u);
         // specify string print multiple times, I don't need any return value and we need to two argument, we can use BiConsumer
 
+                    //Parameter types
         BiConsumer <String, Integer> printMultipleTimes = (a, b)-> {
             for (int i = 0; i <b ; i++) {
                 System.out.println(a);

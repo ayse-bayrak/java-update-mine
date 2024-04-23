@@ -12,7 +12,7 @@ public class Test {
 
         //===============GenericMethod Test=========
 
-        GenericMethod.printEach(numbers);
+        GenericMethod.printEach(numbers); // we can call ClassName.MethodName
         GenericMethod.printEach(decimals);
         GenericMethod.printEach(strings);
 
@@ -33,10 +33,9 @@ public class Test {
 
         //==============GenericInterface Test=============
 
-        GenericInterface<Integer> displayCube = (a) -> {
-            System.out.println(a*a*a);
-        };
-// i need to lambda expression to complete the abstract method
+        GenericInterface<Integer> displayCube =
+                (a) -> {System.out.println(a*a*a);};  // This is lambda expression, like implementing of abstract method of interface
+        // i need to lambda expression to complete the abstract method
 
         GenericInterface<String> thirdCharacter = a-> System.out.println(a.charAt(2));
         thirdCharacter.function("Cydeo");

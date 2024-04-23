@@ -13,6 +13,7 @@ public class TestBiFunction {
 
 // suppose that I'm creating a function which can help me to merge two arrays and return it as a list
 
+        //         parameter type  return type
         BiFunction< int[], int[], List<Integer>> mergeTwoArray = (a, b) -> {
             List<Integer> list = new ArrayList<>();
             for (int each : a) {
@@ -30,6 +31,7 @@ public class TestBiFunction {
        List<Integer> result = mergeTwoArray.apply(arr1, arr2);
         System.out.println(result);
 
+        System.out.println(result.contains(4));
 
     }
 }

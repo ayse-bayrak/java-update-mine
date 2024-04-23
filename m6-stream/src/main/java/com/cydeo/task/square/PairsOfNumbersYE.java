@@ -9,6 +9,7 @@ public class PairsOfNumbersYE {
         List<Integer> numbers1 = Arrays.asList(1, 2, 3);
         List<Integer> numbers2 = Arrays.asList(3, 4);
         List<int[]> pairs = new ArrayList<>();
+
         numbers1.forEach(x -> numbers2.stream() // we can forEach() without .stream()
                         .map(y -> new int[]{x, y})
                         .forEach(pairs::add) // we can use method reference

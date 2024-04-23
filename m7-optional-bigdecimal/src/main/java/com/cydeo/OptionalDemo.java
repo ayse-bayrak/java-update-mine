@@ -8,7 +8,6 @@ public class OptionalDemo {
     //it comes with Java 8 and basically Optional is a new Type
     public static void main(String[] args) {
 
-
         List<Integer> number = Arrays.asList(2, 4, 2, 10, 23);
         //empty()- isPresent()
 
@@ -19,8 +18,10 @@ public class OptionalDemo {
         System.out.println(Optional.of(number).isPresent());//True
 
         //ifPresent
-        Optional<Integer> bigNumber = number.stream()
+        Optional<Integer> bigNumber =
+                number.stream()
                 .filter(x-> x>100).findAny();
+
         bigNumber.ifPresent(System.out::println); //nothing
 
         // get

@@ -31,7 +31,7 @@ public class Main {
 
         // substring method instance, how we can call through the class name?
 
-        //That is only tree things you need to remember
+        //That is only three things you need to remember
         //1- if you're referencing lambda expression if the method static, you can use directly class name double colon method name
         // if the method instance method:
         // 2- either you can say new keyword to mention object

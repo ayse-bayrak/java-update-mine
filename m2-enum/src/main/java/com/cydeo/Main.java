@@ -3,12 +3,12 @@ package com.cydeo;
 public class Main {
     public static void main(String[] args) {
         System.out.println("How to access a constant");
-        Currency c = Currency.DIME;
+        Currency c = Currency.DIME; //EnumName.Constant
         System.out.println(c);
         System.out.println(Currency.PENNY);
 
         System.out.println("How to get all constant");
-        Currency[] currencies = Currency.values();
+        Currency[] currencies = Currency.values();  ////EnumName.values() -> return array
         for (Currency currency : currencies) {
             System.out.println(currency);
         }
@@ -28,14 +28,14 @@ public class Main {
                 break;
         }
 
-        System.out.println("Operataion Task");
+        System.out.println("Operation Task");
        calculate(10, 5, Operation.MINUS);
 
         System.out.println("How to retrieve the constant value");
-        System.out.println(Currency.PENNY.getValue());
+        System.out.println(Currency.PENNY.getValue()); ////EnumName.CONSTANT.getValue()
         System.out.println(Currency.QUARTER.getValue());
-//This structure we're gonna use in the application, we're gonna something from database,
-        //we're gonna assign to enum and we're gonna put in the user interface
+        //This structure we're gonna use in the application, we're gonna something from database,
+        //We're gonna assign to enum and we're gonna put in the user interface
 
         System.out.println(Currency.QUARTER.ordinal()); // it is showing index number of Ordinal
     }

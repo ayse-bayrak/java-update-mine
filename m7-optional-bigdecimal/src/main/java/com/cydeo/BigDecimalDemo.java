@@ -15,9 +15,10 @@ public class BigDecimalDemo {
         BigDecimal b2 = new BigDecimal("374.26");// we should pass String inside in this way
         // one more way create Big Decimal object
         BigDecimal b3 = BigDecimal.valueOf(374.56);
-      //  System.out.println(b1-b2); //Operator '-' cannot be applied to Object
+        // System.out.println(b1-b2); //Operator '-' cannot be applied to Object
         System.out.println(b1.subtract(b2));//0.30
 
+        // one more way create Big Decimal object also
         BigDecimal b4 = BigDecimal.TEN;
         System.out.println(b4); //10
 
@@ -34,7 +35,6 @@ public class BigDecimalDemo {
         System.out.println(new BigDecimal("2").compareTo(new BigDecimal("2"))); //0
         System.out.println(new BigDecimal("3").compareTo(new BigDecimal("2"))); //1
         System.out.println(new BigDecimal("1").compareTo(new BigDecimal("2"))); //-1
-
 
     }
 }

@@ -11,6 +11,7 @@ public class NumberOfCharacters {
 
         words.stream()
                 .map(p->p.length())
+             //   .map(String::length)
                 .forEach(System.out::println);
     }
 }

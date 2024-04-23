@@ -11,7 +11,7 @@ public class GuestTask {
                                 new Guest("David", false, 2),
                                 new Guest("Roger", true, 6))
       .collect(Collectors.teeing
-              // first collector, we select only who confirmed the participation
+              // teeing() gets 2 Collector 1 Merger, first collector, we select only who confirmed the participation
               (Collectors.filtering(Guest::isParticipating,
                       // whe want to collect only the first name in a list
                       Collectors.mapping(Guest::getName, Collectors.toList())),  // output R1 ==>List<String>
@@ -20,7 +20,7 @@ public class GuestTask {
                       Collectors.summingInt(Guest::getParticipantsNumber)), // output R2 ==> Integer
                       // we merge the collectors in a new Object,
                       // the values are implicitly passed
-                      EventParticipation::new)); // merger R1, R2
+                      EventParticipation::new)); // merger R1, R2 //  List<String> guestNameList, Integer totalNumberOfParticipants;
 
         System.out.println(result);
     }

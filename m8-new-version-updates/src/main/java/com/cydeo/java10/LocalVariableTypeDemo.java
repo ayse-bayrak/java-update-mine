@@ -10,10 +10,10 @@ public class LocalVariableTypeDemo {
 
         String abc = "Cydeo";
        // "Cydeo"  when we write just like this, compiler understand it is string because  double quarto
-        // with Java 10 var (shorten of the variable) came
-        //they brought it from Java Script
-        // you can mention in it type with only using var
-        //No type inference in case of member variable, method parameters, return value, only local variable
+       // with Java 10 var (shorten of the variable) came
+       //they brought it from Java Script
+       // you can mention in it type with only using var
+       //No type inference in case of member variable, method parameters, return value, only local variable
 
         var str = "Cydeo";
         var number = 5;
@@ -38,11 +38,11 @@ public class LocalVariableTypeDemo {
         var str; NOT, compile error
         */
 
-       /*
+
        var s = "Ayse";
-        s= 3;
-    Rule: No dynamic type change. Once type of local variable is inferred it cannot be changed.
-        */
+      //  s= 3; // compile error, can not be changed
+   // Rule: No dynamic type change. Once type of local variable is inferred it cannot be changed.
+
 
     }
 }

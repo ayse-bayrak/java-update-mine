@@ -26,7 +26,7 @@ public class AppleTest {
         System.out.println(find(listApple, heavierApple));
 
         System.out.println("=================with lambda==================");
-        greenApple = (Apples apple) -> apple.getColor().equals(Color.GREEN);
+        greenApple = (Apples apple) -> apple.getColor().equals(Color.GREEN);  //without using FindHeavierApple implementing class
         heavierApple = (Apples apple) -> apple.getWeight()>200;
 
         System.out.println(find(listApple, greenApple));

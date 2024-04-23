@@ -16,7 +16,7 @@ public class CarTest {
         Function<Integer, Car> f2 = Car::new;
 
         //IQ what is the difference between constructor and method?
-        //we don't call the constructor's name, we can call with new
+        //we don't call the constructor's name, we can call with new keyword
 
 
         BiFunction<String, Integer, Car> a1 = Car::new;

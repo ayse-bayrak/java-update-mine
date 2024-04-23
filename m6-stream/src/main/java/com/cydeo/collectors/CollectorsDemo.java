@@ -13,7 +13,7 @@ public class CollectorsDemo {
 
     public static void main(String[] args) {
 
-        //Java Collectors is a utility class
+        //Java Collectors is a utility class...
         //utility class is static class and we can use method in the utility class directly ClassName.methodName
        //Stream.collect()
 

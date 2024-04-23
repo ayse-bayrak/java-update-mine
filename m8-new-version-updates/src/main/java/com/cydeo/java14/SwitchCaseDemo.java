@@ -30,7 +30,7 @@ public class SwitchCaseDemo {
         }
 
         System.out.println("*******************");
-        //with Java 14,
+        // with Java 14,
         // you don't need to break statement
         switch(month){
             case 1,3,5,7,8,10,12 -> System.out.println("This month has 31 days");

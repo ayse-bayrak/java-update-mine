@@ -17,7 +17,7 @@ public class Day48Tasks {
         System.out.println("2- What are all the unique cities where the traders work?");
         Set<String> uniqueCity = TransactionData.getAll().stream()
                 .map(p -> p.getTrader().getCity())
-                .collect(Collectors.toSet());
+                .collect(Collectors.toSet());//since it says unique we use Set, because Set does not duplicate
         System.out.println(uniqueCity);
 
         System.out.println("3- Find all traders from Cambridge and sort them by name)");
@@ -49,12 +49,15 @@ public class Day48Tasks {
         System.out.println("7. What is the highest value of all the transactions?");
         int highestValue = TransactionData.getAll().stream()
                 .sorted(Comparator.comparing(Transaction::getValue).reversed())
-                .map(p -> p.getValue()).findAny().get();
+                .map(Transaction::getValue).findAny().get();
         System.out.println("The highest value of all the transactions " + highestValue);
 
         System.out.println("8. Find the transaction with the smallest value.");
         int smallestValue = TransactionData.getAll().stream()
-                .map(Transaction::getValue).sorted().findAny().get();
+                .map(Transaction::getValue)
+                .sorted()
+                .findAny()
+                .get();
 
         System.out.println("The smallest value of all the transactions " + smallestValue);
     }
