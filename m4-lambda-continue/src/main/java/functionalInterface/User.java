@@ -13,7 +13,7 @@ import lombok.*;
 // if there is no any Constructor in your application, @Data is going to create no arg Constructor
 // but if you have any Constructors @Data is not going to cretae no arg Constructor for you.
 //then is going to create the rest of getter setter to string
-// but in the development enviroment usualayi we need to no arg constructor but when we use @Data no custrictor is gone
+// but in the development environment usual's we need to no arg constructor but when we use @Data no constructor is gone
 // so we do not use @Data usually
 
 public class User {

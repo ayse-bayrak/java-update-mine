@@ -15,7 +15,7 @@ public class CollectorsDemo {
 
         //Java Collectors is a utility class...
         //utility class is static class and we can use method in the utility class directly ClassName.methodName
-       //Stream.collect()
+     // Stream.collect();
 
 
         //toCollection(Supplier) : is used to create a Collection using Collector want to hold out of stream

@@ -22,11 +22,11 @@ public class FunctionalInterface {
 
         // in the Predicate interface there is this abstract method
         // boolean test(T t);
-        //signature : accepting an object T, it returns boolean
+        // signature : accepting an object T, it returns boolean
         // when you write your Lambda expression, your Lambda expression signature should be this
 
         Predicate<Integer> lesserThan = i-> i < 18 ;
-        // lesserThan, this is action behaviour, you can paste this one anywhere you want
+                        // lesserThan, this is action behaviour, you can paste this one anywhere you want
         // implementation of the method inside the interface boolean test(T t);
             System.out.println(lesserThan.test(20));
 
@@ -68,8 +68,8 @@ public class FunctionalInterface {
 
         BiFunction<Integer, Integer, Integer> func = (x1, x2)-> x1+x2;
                                         //we don't need to give the type because
- // compiler is looking here, first parameter is integer, second parameter is integer
-        //he says i will figure out for you
+        //compiler is looking here, first parameter is integer, second parameter is integer
+        //it says i will figure out for you
         System.out.println(func.apply(2, 3));
 
         //***********************SUPPLIER **************************//
