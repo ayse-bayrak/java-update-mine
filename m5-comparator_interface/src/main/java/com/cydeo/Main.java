@@ -37,7 +37,7 @@ public class Main {
         list.sort((o2, o1) -> o1.compareTo(o2));
         System.out.println(list);
 
-        list.sort(Comparator.reverseOrder()); ////with reference method
+        list.sort(Comparator.reverseOrder()); //with reference method
 
 
 

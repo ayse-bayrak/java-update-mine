@@ -32,7 +32,7 @@ public class StreamIntermediateOperations {
         //All the intermediate operation return the Stream
         //Terminal operation forEach() return void
 
-        //LIMIT(n)-Trancating Stream
+        //LIMIT(n)-Truncating Stream
         System.out.println("limit()");
 
         list.stream()
