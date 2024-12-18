@@ -10,6 +10,8 @@ public class Main {
 
         Calculate sum = (x, y) -> System.out.println(x+y);
         Calculate s1 = (x, y) -> Calculator.findSum(x,y);
+                    //here can be written like this:
+                    //Calculator::findSum;
         // Reference to a Static Method,
         // if your lambda implementation,
         Calculate s2 = Calculator::findSum;
@@ -22,10 +24,12 @@ public class Main {
 
         BiFunction<String, Integer, String> func = (str, i) -> str.substring(i);
         BiFunction<String, Integer, String> func1 = String ::substring;
+        //if your functional interface is accepting as a parameter also the Class name then you don't need to mention your new keyword.
+        //You can just class name like how you're calling static.
 
         Function<Integer, Double> b = new MyClass()::method;
         BiFunction<MyClass, Integer, Double > b1 = MyClass :: method;
-
+        //Since my functional interface is accepting as a parameter MyClass, we can call directly via class name without new keyword
         //We are just making up
         //This code is looking fancy..
 

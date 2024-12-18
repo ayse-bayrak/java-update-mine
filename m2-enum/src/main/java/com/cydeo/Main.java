@@ -8,7 +8,7 @@ public class Main {
         System.out.println(Currency.PENNY);
 
         System.out.println("How to get all constant");
-        Currency[] currencies = Currency.values();  ////EnumName.values() -> return array
+        Currency[] currencies = Currency.values();  //EnumName.values() -> return array
         for (Currency currency : currencies) {
             System.out.println(currency);
         }
@@ -32,7 +32,7 @@ public class Main {
        calculate(10, 5, Operation.MINUS);
 
         System.out.println("How to retrieve the constant value");
-        System.out.println(Currency.PENNY.getValue()); ////EnumName.CONSTANT.getValue()
+        System.out.println(Currency.PENNY.getValue()); //EnumName.CONSTANT.getValue()
         System.out.println(Currency.QUARTER.getValue());
         //This structure we're gonna use in the application, we're gonna something from database,
         //We're gonna assign to enum and we're gonna put in the user interface

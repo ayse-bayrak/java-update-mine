@@ -26,5 +26,5 @@ public class Swap {
 }
 /*
 Write a generic method to exchange the positions of two different elements in
-array.
+some array.
  */

@@ -9,7 +9,6 @@ import lombok.*;
 @ToString
 //@Data // this is covering already @Getter @Setter @ToString
 // you can just put Data all the other comes you don't need to @Getter @Setter @ToString
-//@AllArgsConstructor
 // if there is no any Constructor in your application, @Data is going to create no arg Constructor
 // but if you have any Constructors @Data is not going to cretae no arg Constructor for you.
 //then is going to create the rest of getter setter to string

@@ -3,8 +3,10 @@ package com.cydeo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team<T extends Player> {  //Any class you can pass to Team. Should accept only Player class and subclasses
-    // SO i add extends Player
+public class Team<T extends Player> {
+    //Any class you can pass to Team.
+    // Should accept only Player class and subclasses
+    // So i add extends Player
 
     private String name;
     private List<Player> members = new ArrayList<>();

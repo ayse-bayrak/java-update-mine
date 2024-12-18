@@ -7,7 +7,7 @@ import java.lang.reflect.Member;
 import java.util.function.*;
 
 //This is anonymous class we don't know name and we wil not use. because of lambda,
-// We should new interface, automatically added method but this interface implements anonymous class, er don't know where or what
+// We should new interface, automatically added method but this interface implements anonymous class, or don't know where or what
 public class FunctionalInterface {
     public static void main(String[] args) {
         Action action = new Action() {

@@ -35,7 +35,6 @@ public class GenericMethod {
         for (T each : list) {
             System.out.println(each);
         }
-
     }
 
 }
